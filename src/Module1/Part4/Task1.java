@@ -50,10 +50,19 @@ public class Task1 {
                 sb2.append(c);
             }
 
+            // Formatting strings
             String firstArrayAsString = sb1.toString();
-            String lastArrayAsString = sb2.toString();
+            String firstSub1 = firstArrayAsString.substring(0, 1).toUpperCase();
+            String firstSub2 = firstArrayAsString.substring(1).toLowerCase();
+            String res1 = firstSub1 + firstSub2;
 
-            System.out.println("Name " + (a+1) +": " + firstArrayAsString.toLowerCase() + " " + lastArrayAsString.toLowerCase());
+            String lastArrayAsString = sb2.toString();
+            String lastSub1 = lastArrayAsString.substring(0, 1).toUpperCase();
+            String lastSub2 = lastArrayAsString.substring(1).toLowerCase();
+            String res2 = lastSub1 + lastSub2;
+
+
+            System.out.println("Name " + (a+1) +": " + res1 + " " + res2);
         }
 
 
