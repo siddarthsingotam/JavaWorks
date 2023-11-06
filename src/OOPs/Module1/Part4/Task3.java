@@ -33,12 +33,13 @@ public class Task3 {
                 if (numberArray[i] == newNumberArray[j]){
                     isDuplicate = true;
                     break;
+
                 }
 
-                if (!isDuplicate){
-                    newNumberArray[uniqueCount] = numberArray[i];
-                    uniqueCount++;
-                }
+            }
+            if (!isDuplicate){
+                newNumberArray[uniqueCount] = numberArray[i];
+                uniqueCount++;
             }
         }
         // Print the resulting array without duplicates

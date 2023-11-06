@@ -10,7 +10,7 @@ public class Task2 {
 
         int[] numbersArray;
 
-        System.out.println("Enter the numbers in array: ");
+        System.out.println("Enter the amount of numbers in array: ");
         int numbersItems = scanner.nextInt();
         numbersArray = new int[numbersItems];
 
@@ -32,9 +32,7 @@ public class Task2 {
         //Add the two maximum values
         int maxSum = numbersArraySorted[numbersArraySorted.length - 1] + numbersArray[numbersArraySorted.length - 2];
 
-        System.out.println(maxSum);
-
-
+        System.out.println("Max sum is: " + maxSum);
 
 
     }
