@@ -1,4 +1,4 @@
-package OOPs.Module2;
+package OOPs.Module2.Part1;
 
 public class ex1 {
     /* Sqrt() calculation using Newton-Raphson method to demonstrate the while-loop
