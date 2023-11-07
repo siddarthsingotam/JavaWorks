@@ -3,7 +3,7 @@ package OOPs.Module2.Part1;
 /* Define a class Car (convention capitalizes class names).
  * Car is public (as classes usually are, more on this later).
  */
-public class Car {
+public class CarX {
     /* An object of class Car will have instance variables speed and gasolineLevel.
      * Both are private (they can not be accessed outside the class methods).
      * Keep instance variables private whenever possible.
@@ -15,7 +15,7 @@ public class Car {
     /* This is the method (constructor) called when a new instance of Car is created (with new).
      * Constructors may also have arguments.
      */
-    public Car(String typeName) {
+    public CarX(String typeName) {
         speed = 0; gasolineLevel = 0;
         this.typeName = typeName;   // this refers to the object itself.
         // The reference is useful if you want to use parameter names that are
