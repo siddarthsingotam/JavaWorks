@@ -1,4 +1,4 @@
-package OOPs.Module2;
+package OOPs.Module2.Part2;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,6 +7,13 @@ public class GroceryListManager {
     private HashMap<String, Double> groceryList = new HashMap<>();
     private HashMap<String, String> itemCategories = new HashMap<>();
     private HashMap<String, Integer> itemQuantities = new HashMap<>();
+    private ShoppingList backyardBBQList;
+    private ShoppingList weekendCampingList;
+
+    public GroceryListManager() {
+        this.backyardBBQList = new ShoppingList("Backyard BBQ");
+        this.weekendCampingList = new ShoppingList("Weekend Camping");
+    }
 
     public void addItem(String item, double cost, String category, int quantity) {
         if (!groceryList.containsKey(item)) {
@@ -72,26 +79,42 @@ public class GroceryListManager {
         }
     }
 
+    public void addToBackyardBBQList(String item) {
+        backyardBBQList.addItem(item);
+    }
+
+    public void addToWeekendCampingList(String item) {
+        weekendCampingList.addItem(item);
+    }
+
+    public void removeFromBackyardBBQList(String item) {
+        backyardBBQList.removeItem(item);
+    }
+
+    public void removeFromWeekendCampingList(String item) {
+        weekendCampingList.removeItem(item);
+    }
+
+    public void displayBackyardBBQList() {
+        backyardBBQList.displayList();
+    }
+
+    public void displayWeekendCampingList() {
+        weekendCampingList.displayList();
+    }
+
     public static void main(String[] args) {
         GroceryListManager manager = new GroceryListManager();
 
-        // Add items with costs, categories, and quantities
-        manager.addItem("Apples", 2.5, "Fruits", 5);
-        manager.addItem("Milk", 1.5, "Dairy", 2);
-        manager.addItem("Bread", 1.0, "Bakery", 3);
+        // Add items to specific shopping lists
+        manager.addToBackyardBBQList("Burgers");
+        manager.addToBackyardBBQList("Hot Dogs");
+        manager.addToWeekendCampingList("Tent");
+        manager.addToWeekendCampingList("Marshmallows");
 
-        // Add items with quantities only (assume default cost, category, and quantity is 0)
-        manager.addItemWithQuantity("Bananas", 4);
-        manager.addItemWithQuantity("Cheese", 1);
-
-        // Display the grocery list
-        manager.displayList();
-
-        // Update quantity of an item
-        manager.updateQuantity("Apples", 8);
-
-        // Display available items (quantity > 0)
-        manager.displayAvailableItems();
+        // Display specific shopping lists
+        manager.displayBackyardBBQList();
+        manager.displayWeekendCampingList();
     }
 }
 
