@@ -21,6 +21,7 @@ public class LibraryMain {
         // Search for books by a specific author and display the results
         library.findBooksByAuthor("Jane Doe");
 
+        System.out.println();
         // Borrow a book
         library.borrowBook("Introduction to Java Programming");
         library.displayBooks();
@@ -29,6 +30,18 @@ public class LibraryMain {
         Book returnedBook = new Book("Introduction to Java Programming", "John Smith", 2020);
         library.returnBook(returnedBook);
         library.displayBooks();
+
+
+        System.out.println();
+        // Check book availability
+        String bookTitleToCheck = "Data Structures and Algorithms";
+        boolean isAvailable = library.isBookAvailable(bookTitleToCheck);
+
+        if (isAvailable) {
+            System.out.println("Book \"" + bookTitleToCheck + "\" is available in the library.");
+        } else {
+            System.out.println("Book \"" + bookTitleToCheck + "\" is not available in the library.");
+        }
     }
 }
 

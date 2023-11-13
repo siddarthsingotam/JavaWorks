@@ -59,4 +59,14 @@ public class Library {
         }
         return null;
     }
+
+    // Check the availability of a specific book by its title
+    public boolean isBookAvailable(String title) {
+        for (Book book : books) {
+            if (book.getTitle().equals(title)) {
+                return true; // Book is available
+            }
+        }
+        return false; // Book is not available
+    }
 }
