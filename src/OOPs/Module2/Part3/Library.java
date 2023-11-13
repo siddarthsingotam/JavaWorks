@@ -69,4 +69,40 @@ public class Library {
         }
         return false; // Book is not available
     }
+
+    // Calculate and return the average rating of all books in the library
+    public double getAverageBookRating() {
+        if (books.isEmpty()) {
+            System.out.println("No books available to calculate average rating.");
+            return 0.0;
+        }
+
+        double totalRating = 0;
+        for (Book book : books) {
+            totalRating += book.getRating();
+        }
+
+        return totalRating / books.size();
+    }
+
+    // Return the book with the highest number of reviews
+    public Book getMostReviewedBook() {
+        if (books.isEmpty()) {
+            System.out.println("No books available to determine the most reviewed book.");
+            return null;
+        }
+
+        Book mostReviewedBook = books.get(0);
+        int maxReviews = mostReviewedBook.getReviews().size();
+
+        for (Book book : books) {
+            int currentReviews = book.getReviews().size();
+            if (currentReviews > maxReviews) {
+                mostReviewedBook = book;
+                maxReviews = currentReviews;
+            }
+        }
+
+        return mostReviewedBook;
+    }
 }

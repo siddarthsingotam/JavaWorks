@@ -26,6 +26,10 @@ public class Book {
         return author;
     }
 
+    public double getRating() {
+        return rating;
+    }
+
     public int getPublicationYear() {
         return publicationYear;
     }
@@ -59,6 +63,11 @@ public class Book {
         } else {
             System.out.println("No reviews available.");
         }
+    }
+
+    // Get the list of reviews
+    public ArrayList<String> getReviews() {
+        return reviews;
     }
 }
 
