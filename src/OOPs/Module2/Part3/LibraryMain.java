@@ -42,6 +42,16 @@ public class LibraryMain {
         } else {
             System.out.println("Book \"" + bookTitleToCheck + "\" is not available in the library.");
         }
+        System.out.println();
+
+        // Set rating and add reviews to a book
+        Book bookToReview = new Book("Introduction to Java Programming", "John Smith", 2020);
+        bookToReview.setRating(4.5);
+        bookToReview.addReview("Great book for beginners!");
+        bookToReview.addReview("The examples are very helpful.");
+
+        // Display book details with rating and reviews
+        bookToReview.displayBookDetails();
     }
 }
 
