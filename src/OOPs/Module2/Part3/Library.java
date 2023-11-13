@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Library {
     private ArrayList<Book> books = new ArrayList<>();
+    private ArrayList<User> users = new ArrayList<>();
 
     // Add a book to the library
     public void addBook(Book book) {
@@ -104,5 +105,28 @@ public class Library {
         }
 
         return mostReviewedBook;
+    }
+
+    // Add a user to the library
+    public void addUser(User user) {
+        users.add(user);
+        System.out.println("User \"" + user.getName() + "\" has been added to the library.");
+    }
+
+    // Display all users in the library
+    public void displayUsers() {
+        System.out.println("\nLibrary Users:");
+        for (User user : users) {
+            System.out.println("User: " + user.getName() + ", Age: " + user.getAge());
+            ArrayList<Book> borrowedBooks = user.getBorrowedBooks();
+            if (!borrowedBooks.isEmpty()) {
+                System.out.println("Borrowed Books:");
+                for (Book book : borrowedBooks) {
+                    System.out.println("- " + book.getTitle());
+                }
+            } else {
+                System.out.println("No books borrowed.");
+            }
+        }
     }
 }
