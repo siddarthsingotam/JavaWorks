@@ -1,4 +1,4 @@
-package OOPs.Module3.Part2;
+package OOPs.Module3.Part2.Task1;
 
 public class Bus implements Vehicle {
     private  String type;

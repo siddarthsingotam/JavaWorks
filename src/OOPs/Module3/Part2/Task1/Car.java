@@ -1,6 +1,4 @@
-package OOPs.Module3.Part2;
-
-import java.sql.SQLOutput;
+package OOPs.Module3.Part2.Task1;
 
 public class Car implements Vehicle {
     private static String type;
