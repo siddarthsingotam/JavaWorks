@@ -38,7 +38,7 @@ public class Calculator {
     public static void main(String[] args) {
         Calculator c = new Calculator();
         System.out.println(c.getResult()); // should print 0
-        c.addPositiveInteger(-1);
+        c.addPositiveInteger(-1); // should throw an exception
         c.addPositiveInteger(2);
         c.addPositiveInteger(3);
         System.out.println(c.getResult()); // should print 5
