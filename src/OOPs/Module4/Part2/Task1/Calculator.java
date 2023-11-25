@@ -8,9 +8,10 @@ package OOPs.Module4.Part2.Task1;
 //A method that resets the calculator to zero.
 //A method that adds an integer to the calculator.
 //A method that returns the current value of the calculator
-public class Caculator {
+public class Calculator {
     int result = 0;
-    public Caculator() {
+    public Calculator() {
+
     }
 
     // Copilot helped me with this to sum positive integers, just wrote the method name.
@@ -35,7 +36,7 @@ public class Caculator {
 
     // Made some adjustments in the temporary main method to test the code, also partially written by copilot
     public static void main(String[] args) {
-        Caculator c = new Caculator();
+        Calculator c = new Calculator();
         System.out.println(c.getResult()); // should print 0
         c.addPositiveInteger(2);
         c.addPositiveInteger(3);
