@@ -1,32 +1,5 @@
 package Exercise_5_2.Task2;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-class ThreadSafeArrayList<T> {
-    private List<T> internalList = new ArrayList<>();
-    private Object lock = new Object();
-
-    public void addElement(T element) {
-        synchronized (lock) {
-            internalList.add(element);
-        }
-    }
-
-    public int getSize() {
-        synchronized (lock) {
-            return internalList.size();
-        }
-    }
-
-    public void removeElement(T element) {
-        synchronized (lock) {
-            internalList.remove(element);
-        }
-    }
-}
-
 public class ThreadSafeArrayListTest {
     public static void main(String[] args) throws InterruptedException {
         ThreadSafeArrayList<String> threadSafeList = new ThreadSafeArrayList<>();
@@ -68,7 +41,7 @@ public class ThreadSafeArrayListTest {
         removeThread.join();
 
         // Print the final size of the list
-        System.out.println("Final Size: " + threadSafeList.getSize());
+        System.out.println("Final Size is: " + threadSafeList.getSize());
     }
 }
 
