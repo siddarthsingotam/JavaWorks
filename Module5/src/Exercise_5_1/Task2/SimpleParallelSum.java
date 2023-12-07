@@ -1,4 +1,4 @@
-package Exercises.Task2;
+package Exercise_5_1.Task2;
 
 import java.util.ArrayList;
 import java.util.List;
